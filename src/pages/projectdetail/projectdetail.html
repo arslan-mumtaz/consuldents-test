@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Project Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+    <ion-card-content>
+      <ion-card-title>
+         {{project.title}}
+       
+      </ion-card-title>
+      <p>
+        {{project.description}}
+      </p>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name='logo-usd' item-start style="color: #55acee"></ion-icon>
+      Budget
+      <ion-badge item-end> {{project.budget}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='time' item-start style="color: #55acee"></ion-icon>
+      Last Date
+      <ion-badge item-end>{{project.deadline_eoi}}</ion-badge>
+    </ion-item>
+
+  </ion-card>
+
+</ion-content>

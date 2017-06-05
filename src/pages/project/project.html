@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+   <ion-title>
+      Projects
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+   
+    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="getItems($event)"></ion-searchbar>
+ 
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home">
+ <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+    </div>
+  <ion-list>
+    <ion-item *ngFor="let project of projects">
+       <button ion-item (click)="goToProjectDetail(project)">
+          <h3>{{project.title}}</h3>
+          <p>
+            Budget: {{project.budget}} $ &mdash;
+          </p>
+        </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

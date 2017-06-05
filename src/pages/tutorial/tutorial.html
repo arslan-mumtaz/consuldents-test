@@ -1,0 +1,44 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()" color="primary">Skip</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>
+      <h2 class="slide-title">
+        Welcome to <b>Consuldents</b>
+      </h2>
+      <p>
+        The <b>Consuldents</b> is a paltform to connect industry with academia.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image"/>
+      <h2 class="slide-title" >What is Consuldents?</h2>
+      <p><b>Consuldent</b> is an online platform to bridge the missing path between industry and academia.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image"/>
+      <h2 class="slide-title">Is it freelance platform?</h2>
+      <p>The <b>Consuldent</b> is not another freelance platform, we students/academia and industy work on real cutting edge technologies.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
+      <h2 class="slide-title">Ready to Connect?</h2>
+      <button ion-button icon-right large clear (click)="startApp()">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>
